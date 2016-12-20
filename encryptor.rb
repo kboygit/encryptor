@@ -4,12 +4,17 @@ def encrypt_letter(letter)
   cipher[lowercase_letter]
 end
 
-def encrypt(string)
-  #Cut the input string into letters
-  #Encrypt those letters one at a time, gathering the results
-  #Join the results back together in one string
-  letters = string.split("")
-end
+  def encrypt(string)
+    #Cut the input string into letters
+      letters = string.split("")
+    #Encrypt those letters one at a time, gathering the results
+      results = []
+      letters.each do |letter|
+        encrypted_letter = encrypt_letter(letter)
+        results.push(encrypted_letter).join
+      end
+    #Join the results back together in one string
+  end
 
 def cipher
   {
