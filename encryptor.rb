@@ -1,4 +1,8 @@
 class Encryptor
+def encrypt(letter)
+  cipher[letter]
+end
+
 def cipher
   {
     'a' => 'n', 'b' => 'o', 'c' => 'p', 'd' => 'q', 'e' => 'r',
