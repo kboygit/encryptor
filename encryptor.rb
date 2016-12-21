@@ -11,8 +11,9 @@ end
       results = []
       letters.each do |letter|
         encrypted_letter = encrypt_letter(letter)
-        results.push(encrypted_letter).join
+        results.push(encrypted_letter)
       end
+      results.join
     #Join the results back together in one string
   end
 
