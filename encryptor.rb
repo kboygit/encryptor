@@ -1,8 +1,8 @@
 class Encryptor
-def encrypt_letter(letter)
-  lowercase_letter = letter.downcase
-  cipher[lowercase_letter]
-end
+  def encrypt_letter(letter)
+    lowercase_letter = letter.downcase
+    cipher[lowercase_letter]
+  end
 
   def encrypt(string)
       letters = string.split("")
@@ -14,8 +14,20 @@ end
         results.push(encrypted_letter)
       end
       results.join;
-
   end
+
+def decrypt(string)
+  letters = string.split("")
+
+  results = []
+  capitals = letters.each do |letter|
+    letter.upcase
+    encrypted_letter = encrypt_letter(letter)
+    results.push(encrypted_letter)
+  end
+  results.join;
+end
+
 
 def cipher
   {
@@ -26,7 +38,6 @@ def cipher
     'u' => 'h', 'v' => 'i', 'w' => 'j', 'x' => 'k', 'y' => 'l',
     'z' => 'm'
   }
-
 
   end
 end
