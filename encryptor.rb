@@ -16,13 +16,13 @@ class Encryptor
                 results.join
             end
                       # Decryption
-                        def decrypt(string)
+                        def decrypt(string,rotation)
                           letters = string.split("")
 
                           results = []
                           capitals = letters.each do |letter|
                             letter.upcase
-                            encrypted_letter = encrypt_letter(letter)
+                            encrypted_letter = encrypt_letter(letter,rotation)
                             results.push(encrypted_letter)
                           end
                           results.join
@@ -47,3 +47,16 @@ def cipher(rotation)
   Hash[characters.zip(rotated_characters)]
 end
 end
+
+# def encrypt_file(filename,rotation)
+# # Create the file handle to the input file
+# # Read the text of the input file
+# # Encrypt the text
+# # Create a name for the output file
+# # Create an output file handle
+# # Write out the text
+# # Close the file
+# filename = File.open("secret.txt","r")
+# file = filename.encrypt(rotation)
+#
+# end
