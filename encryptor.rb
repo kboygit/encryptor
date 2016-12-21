@@ -4,13 +4,13 @@ class Encryptor
     cipher_for_rotation[letter]
   end
             #Encryption
-            def encrypt(string)
+            def encrypt(string,rotation)
                 letters = string.split("")
 
                 results = []
                 capitals = letters.each do |letter|
                   letter.upcase
-                  encrypted_letter = encrypt_letter(letter)
+                  encrypted_letter = encrypt_letter(letter,rotation)
                   results.push(encrypted_letter)
                 end
                 results.join
