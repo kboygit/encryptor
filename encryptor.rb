@@ -5,16 +5,16 @@ def encrypt_letter(letter)
 end
 
   def encrypt(string)
-    #Cut the input string into letters
       letters = string.split("")
-    #Encrypt those letters one at a time, gathering the results
+
       results = []
-      letters.each do |letter|
+      capitals = letters.each do |letter|
+        letter.upcase
         encrypted_letter = encrypt_letter(letter)
         results.push(encrypted_letter)
       end
-      results.join
-    #Join the results back together in one string
+      results.join;
+
   end
 
 def cipher
