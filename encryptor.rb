@@ -3,32 +3,32 @@ class Encryptor
     lowercase_letter = letter.downcase
     cipher[lowercase_letter]
   end
+            #Encryption
+            def encrypt(string)
+                letters = string.split("")
 
-  def encrypt(string)
-      letters = string.split("")
+                results = []
+                capitals = letters.each do |letter|
+                  letter.upcase
+                  encrypted_letter = encrypt_letter(letter)
+                  results.push(encrypted_letter)
+                end
+                results.join;
+            end
+                      # Decryption
+                        def decrypt(string)
+                          letters = string.split("")
 
-      results = []
-      capitals = letters.each do |letter|
-        letter.upcase
-        encrypted_letter = encrypt_letter(letter)
-        results.push(encrypted_letter)
-      end
-      results.join;
-  end
+                          results = []
+                          capitals = letters.each do |letter|
+                            letter.upcase
+                            encrypted_letter = encrypt_letter(letter)
+                            results.push(encrypted_letter)
+                          end
+                          results.join;
+                        end
 
-def decrypt(string)
-  letters = string.split("")
-
-  results = []
-  capitals = letters.each do |letter|
-    letter.upcase
-    encrypted_letter = encrypt_letter(letter)
-    results.push(encrypted_letter)
-  end
-  results.join;
-end
-
-
+#Cipher
 def cipher
   {
     'a' => 'n', 'b' => 'o', 'c' => 'p', 'd' => 'q', 'e' => 'r',
