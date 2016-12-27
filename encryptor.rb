@@ -28,6 +28,7 @@ class Encryptor
                           results.join
                         end
 
+
                           # File Encryption
                           def encrypt_file(filename,rotation)
                             # Create the file handle to the encrypted file
@@ -54,6 +55,7 @@ class Encryptor
 #                                                                   #
 #   end                                                             #
 # end                                                               #
+
 def cipher(rotation)
   characters = (' '..'z').to_a
   rotated_characters = characters.rotate(rotation)
